@@ -124,6 +124,10 @@ export default abstract class CardanoPeerConnect {
 
     this.meerkats.push(this.DAppDiscoveryMeerkat);
   };
+  
+  public getDiscoveryMeerkatSeed = () : string | null => {
+    return this.DAppDiscoveryMeerkat?.seed ?? null
+  }
 
   public setOnConnect = (
     onConnectCallback: (connectMessage: IConnectMessage) => void
